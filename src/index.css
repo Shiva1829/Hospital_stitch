@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-cyan: #22d3ee;
+  --color-brand-teal: #2dd4bf;
+  --color-brand-emerald: #34d399;
+  --color-brand-indigo: #818cf8;
+  --color-brand-violet: #a78bfa;
+  --color-brand-rose: #fb7185;
+}
+
+/* Custom gorgeous animations and clinical visual effects */
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.96); opacity: 0.4; }
+  50% { transform: scale(1.04); opacity: 0.75; }
+  100% { transform: scale(0.96); opacity: 0.4; }
+}
+
+@keyframes scan-line {
+  0% { top: 0%; opacity: 0.3; }
+  50% { top: 100%; opacity: 0.8; }
+  100% { top: 0%; opacity: 0.3; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.1); }
+  30% { transform: scale(1.03); }
+  40% { transform: scale(1.12); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 4s infinite ease-in-out;
+}
+
+.animate-scan-line {
+  animation: scan-line 3s infinite linear;
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+.animate-heartbeat-slow {
+  animation: heartbeat 2.5s infinite ease-in-out;
+}
+
+/* Glowing aesthetic helpers with beautiful blur drop-shadows */
+.glow-cyan {
+  box-shadow: 0 4px 20px -2px rgba(34, 211, 238, 0.12), 0 0 15px -3px rgba(34, 211, 238, 0.08);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-cyan:hover {
+  box-shadow: 0 4px 30px -2px rgba(34, 211, 238, 0.22), 0 0 25px -3px rgba(34, 211, 238, 0.15);
+  border-color: rgba(34, 211, 238, 0.3) !important;
+}
+
+.glow-emerald {
+  box-shadow: 0 4px 20px -2px rgba(52, 211, 153, 0.12), 0 0 15px -3px rgba(52, 211, 153, 0.08);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-emerald:hover {
+  box-shadow: 0 4px 30px -2px rgba(52, 211, 153, 0.22), 0 0 25px -3px rgba(52, 211, 153, 0.15);
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+
+.glow-indigo {
+  box-shadow: 0 4px 20px -2px rgba(129, 140, 248, 0.12), 0 0 15px -3px rgba(129, 140, 248, 0.08);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-indigo:hover {
+  box-shadow: 0 4px 30px -2px rgba(129, 140, 248, 0.22), 0 0 25px -3px rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.3) !important;
+}
+
+.glow-rose {
+  box-shadow: 0 4px 20px -2px rgba(251, 113, 133, 0.12), 0 0 15px -3px rgba(251, 113, 133, 0.08);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-rose:hover {
+  box-shadow: 0 4px 30px -2px rgba(251, 113, 133, 0.22), 0 0 25px -3px rgba(251, 113, 133, 0.15);
+  border-color: rgba(251, 113, 133, 0.3) !important;
+}
+
+/* Custom Scrollbar for sleek UI */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 99px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Glass panel design tokens */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+/* Modern page-revealing transitions */
+.page-reveal {
+  animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom glowing borders and shadows for premium widgets */
+.premium-gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+}
+.premium-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.0) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

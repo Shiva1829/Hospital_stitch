@@ -1,0 +1,8 @@
+{
+  "name": "Remix: AI Hospital Management System",
+  "description": "An advanced, full-stack healthcare management portal with a live multi-disease AI diagnosis analyzer, medical scan interpreter (MRI/X-ray/CT), appointments engine, and real-time clinical dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
